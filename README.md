@@ -73,7 +73,7 @@ It is intended, as possible definitions of the success of a film, to be able to 
 - Predict the note on IMDB a week after release, and whoever says IMDB can say other platforms (Rotten Tomatoes, Metacritic)
 - Predict your success (previously defined) one week after your release
 
-For this, various data sources will be used, such as: Twitter, Reddit, YouTube, IMDB, and those that we can discover as the investigation progresses. One of the main and central components of the application is sentiment analysis, which would become the main focus of the prediction.
+For this, various data sources will be used, such as: Twitter, IMDB, and those that we can discover as the investigation progresses. One of the main and central components of the application is sentiment analysis, which would become the main focus of the prediction.
 
 ## Documentation
 [↑ Back to top](#table-of-contents)
@@ -111,14 +111,12 @@ Regarding the ethics, our goal woudln't be to forcefeed certain movies, nor to d
 [↑ To the section](#design)
 
 1. Node-RED sniffs the data and sends them to
-1. Kafka, which itself distributes it to
 1. Spark for them to be transformed and stored in
 1. MongoDB to be later retrieved with
 1. Google Colab/Python
 1. To be trained with Spark saving the predictions in
 1. MongoDB so they can be accessed from
-1. PowerBI/Tableau and display them in
-1. Azure Web Service with a simple Front with an even simpler interaction
+1. PowerBI/Tableau and display them
 
 ### Data Structure
 [↑ To the section](#design)
@@ -142,9 +140,6 @@ It will serve us as the main storage for our models, all the data that comes to 
 
 - IMDB
 - Twitter
-- YouTube
-- Reddit
-- Google Trends
 
 ## Product
 [↑ Back to top](#table-of-contents)
